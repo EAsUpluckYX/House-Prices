@@ -4,6 +4,8 @@
 
 This repo explores the Air Quality in Canada.
 
+To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
+
 
 ## File Structure
 
