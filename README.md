@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repo explores the mental health problems in Canada.
+This repo explores the Air Quality in Canada.
 
 
 ## File Structure
