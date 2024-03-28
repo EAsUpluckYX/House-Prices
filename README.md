@@ -1,4 +1,4 @@
-# Air-Quality in Canada
+# Air Quality in Canada
 
 ## Overview
 
