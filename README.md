@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repo explores the Air Quality in Canada.
+This repo explores the conventional air pollution monitoring data. Particularly with regard to the polluting nature of benzene, I will be focusing primarily on seasonal variations in pollution.
 
 To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
 
