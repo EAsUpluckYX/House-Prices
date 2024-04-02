@@ -1,8 +1,8 @@
-# Air Quality in Canada
+# Rising House Prices
 
 ## Overview
 
-This repo explores the conventional air pollution monitoring data. Particularly with regard to the polluting nature of benzene, I will be focusing primarily on seasonal variations in pollution.
+This repo explores the factor of rising house prices.  Particularly with analyzing block groups in California from the 1990 Census. This may help you gain some insight into the range of housing costs in various regions.
 
 To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
 
@@ -11,7 +11,7 @@ To use this folder, click the green "Code" button", then "Download ZIP". Move th
 
 The repo is structured as:
 
--   `data/raw_data` contains the raw data as obtained from data.ontario.ca.
+-   `data/raw_data` contains the raw data as obtained from Key2STATS.
 -   `data/analysis_data` contains the cleaned dataset that was constructed.
 -   `model` contains fitted models. 
 -   `other` contains relevant literature, details about LLM chat interactions, and sketches.
