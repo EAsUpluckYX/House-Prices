@@ -1,0 +1,151 @@
+---
+title: "Factors Driving Home Prices"
+subtitle: "Why do house prices remain high in many areas?"
+author: 
+  - Shuyuan Zheng
+thanks: "Code and data are available at: https://github.com/EAsUpluckYX/House-Prices."
+date: today
+date-format: long
+abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+```
+
+
+# Introduction
+
+In recent years, the global housing market has witnessed unprecedented fluctuations, with housing prices soaring across many regions. This trend poses significant challenges for individuals, especially those on the cusp of pivotal life transitions, such as recent graduates entering the workforce. The intricate dance between income levels, geographical factors, and population dynamics plays a crucial role in shaping the accessibility and affordability of housing. Recognizing the profound impact these elements have on housing markets provides a foundation for our inquiry into the dynamics of housing prices within a specific California district, leveraging data from the 1990 census.
+
+This paper embarks on a comprehensive exploration of the factors influencing housing prices, with a particular focus on the interplay between location attributes (longitude and latitude, proximity to the ocean), demographic characteristics (population density), and economic indicators (median income). 
+
+Lutz provides a foundational perspective on the geographical determinants of housing prices [@Lutz2007], employing various kriging techniques to offer insights into spatial price variations. This analytical approach underscores the significance of location, a theme echoed in our investigation. Concurrently, Banerjee & Duflo delve into the ramifications of urban population density and housing supply expansion on market prices in major Chinese cities, highlighting the critical influence of demographic pressures [@BanerjeeDuflo2019]. Additionally, Brock examines the correlation between housing affordability and income in Ghana, further enriching our understanding of economic factors at play[@Brock2016].
+
+By synthesizing these diverse perspectives, our study aims to unravel the complex web of factors that contribute to housing price trends in the California district under examination. Through a meticulous analysis of the 1990 census data, we seek to uncover the nuanced relationships between housing characteristics, economic conditions, and demographic shifts. This exploration not only sheds light on the local housing market dynamics but also contributes to the broader discourse on housing affordability and market behavior.
+
+Structured in five sections, this paper will first introduce the data sources, followed by a detailed examination of the housing market trends in our district of focus. Subsequently, we will apply linear regression models to analyze the relationships between housing prices and their determinants. The findings will be presented graphically to facilitate a clearer understanding of the underlying patterns and trends. In the concluding section, we aim to distill insights that could inform policy-making and strategy development for addressing housing market challenges, thereby offering valuable perspectives for scholars, policymakers, and stakeholders interested in the intricacies of housing economics.
+
+
+
+# Data {#sec-data}
+
+## Data Source and Description
+
+The data I will use in this project comes from Key2STATS. It includes 20433 observations on 10 variables. The variables are
+
+- response: median_house_value，which means the housing price
+- predictor 1: median_income，which means median income for households within a block of houses (measured in tens of thousands of US Dollars)
+- predictor 2: population，which means total number of people residing within a block
+- predictor 3:longitude,which means a measure of how far west a house is; a higher value is farther west
+- predictor 4:ocean_proximity,which means location of the house w.r.t ocean/sea
+- predictor 5:latitude, which means a measure of how far north a house is; a higher value is farther north
+
+In line with the background research conducted, these variables all seem relevant to the response and so I will include them to be consistent with previous results.
+
+Coming Soon...
+
+
+```{r}
+#| label: fig-planes
+#| fig-cap: Relationship between wing length and width
+#| echo: false
+#| warning: false
+#| message: false
+
+##analysis_data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+
+###Coming Soon
+```
+
+Talk way more about it. 
+
+
+
+# Model
+
+The goal of our modelling strategy is twofold. Firstly,...
+
+Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+
+## Model set-up
+
+Coming Soon
+
+### Model justification
+
+Coming Soon
+
+# Results
+
+Coming Soon
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
+###library(rstanarm)
+
+###first_model <-
+  ###readRDS(file = here::here("models/first_model.rds"))
+```
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-modelresults
+#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
+#| warning: false
+
+###
+```
+
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+# Model details {#sec-model-details}
+
+## Posterior predictive check
+
+###
+
+
+
+\newpage
+
+
+# References
+
+
