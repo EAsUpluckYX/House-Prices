@@ -2,7 +2,7 @@
 # Purpose: Simulates some interesting variables from California housing market data.
 # Author: Shuyuan Zheng
 # Date: 10 April 2024
-# Contact:  Sheldon.Zheng@utoronto.ca
+# Contact:  Sheldon.Zheng@mail.utoronto.ca 
 # License: MIT
 # Pre-requisites: No
 
