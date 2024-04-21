@@ -25,8 +25,8 @@ print(column_means)
 
 #### Grab a portion of the data as train data and test data. ####
 rows <- sample(1:20641, 641, replace=FALSE) 
-train<- data2[rows,]
-test=data2[-rows,]
+train<- data[rows,]
+test=data[-rows,]
 
 
 
