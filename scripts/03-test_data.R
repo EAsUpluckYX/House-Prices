@@ -1,30 +1,35 @@
 #### Preamble ####
-# Purpose: Cleans the raw data so that it can be analyzed.
+# Purpose: Tests the cleaned housing data based on our expectations from data cleaning.
 # Author: Shuyuan Zheng
 # Date: 10 April 2024
 # Contact: Sheldon.Zheng@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: Need to have manually downloaded the data.
+# Pre-requisites: Need cleaned data from data cleaning process
+
 
 #### Workspace setup ####
-library(tidyverse)
 library(arrow)
+library(tidyverse)
 
-#### Clean data ####
-data <- read_csv("data/raw_data/California Housing Prices_1597_1.csv")
+#### Test data ####
+cleaned_data <- read_parquet("data/analysis_data/cleaned_data.parquet")
 
-data <- data |>
-  mutate(
-    total_bedrooms = if_else(is.na(total_bedrooms), mean(total_bedrooms, na.rm = TRUE), total_bedrooms)
-  )
+# Test expectations for 'median_house_value'
+# Expect that values are within a reasonable range for California housing.
+all(cleaned_data$median_house_value >= 10000 & cleaned_data$median_house_value <= 1000000)
 
-numeric_columns <- sapply(data, is.numeric)
-data <- data |>
-  mutate(across(where(is.numeric), ~if_else(is.na(.), mean(., na.rm = TRUE), .)))
+# Test expectations for 'total_bedrooms'
+# Expect that there are no negative values for bedrooms.
+all(cleaned_data$total_bedrooms >= 0)
 
-column_means <- colMeans(select(data, where(is.numeric)), na.rm = TRUE)
-print(column_means)
+# Test expectations for 'ocean_proximity'
+# Expect that this categorical variable only contains specific categories.
+all(cleaned_data$ocean_proximity %in% c("NEAR BAY", "INLAND", "<1H OCEAN", "NEAR OCEAN", "ISLAND"))
 
-#### Save data ####
-write_csv(data, "data/analysis_data/cleaned_data.csv")
-write_parquet(data, "data/analysis_data/cleaned_data.parquet")
+# Test expectations for 'house_median_age'
+# Expect that the age of the house is between 0 and 100 years.
+all(cleaned_data$housing_median_age >= 0 & cleaned_data$housing_median_age <= 100)
+
+# Test data integrity
+# Expect that there are no missing values in key columns.
+all(complete.cases(cleaned_data))
