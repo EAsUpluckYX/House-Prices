@@ -13,7 +13,7 @@ library(arrow)
 #### Clean data ####
 data <- read_csv("data/raw_data/California Housing Prices_1597_1.csv")
 
-data2 <- data |>
+data <- data |>
   mutate(
     total_bedrooms = if_else(is.na(total_bedrooms), mean(total_bedrooms, na.rm = TRUE), total_bedrooms)
   )
@@ -29,9 +29,12 @@ train<- data2[rows,]
 test=data2[-rows,]
 
 
-#### Save data ####
-write_csv(train, "trainfinal.csv")
-write_csv(test, "testfinal.csv")
 
-write_parquet(train, "trainfinal.parquet")
-write_parquet(test, "testfinal.parquet")
+#### Save data ####
+write_csv(train, "data/analysis_data/train_data.csv")
+write_csv(test, "data/analysis_data/test_data.csv")
+write_csv(data, "data/analysis_data/cleaned_data.csv")
+
+write_parquet(train, "data/analysis_data/train_data.parquet")
+write_parquet(test, "data/analysis_data/test_data.parquet")
+write_parquet(data, "data/analysis_data/cleaned_data.parquet")
