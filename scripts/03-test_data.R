@@ -12,8 +12,8 @@ library(arrow)
 library(tidyverse)
 
 #### Test data ####
-cleaned_data <- read_parquet("data/analysis_data/trainfinal.parquet")
-cleaned_data1 <- read_parquet("data/analysis_data/testfinal.parquet")
+cleaned_data <- read_parquet("data/analysis_data/train_data.parquet")
+cleaned_data1 <- read_parquet("data/analysis_data/test_data.parquet")
 
 # Test expectations for 'median_house_value'
 # Expect that values are within a reasonable range for California housing.
