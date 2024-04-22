@@ -32,8 +32,8 @@ library(broom)
 #| warning: false
 #| message: false
 #Data Loading
-test <- read_parquet("test_data.parquet")
-train <- read_parquet("train_data.parquet")
+test <- read_parquet("data/analysis_data/test_data.parquet")
+train <- read_parquet("data/analysis_data/train_data.parquet")
 
 ```
 
