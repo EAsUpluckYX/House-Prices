@@ -11,7 +11,7 @@ library(tidyverse)
 library(rstanarm)
 
 #### Read data ####
-data_model <- read_csv(""data/analysis_data/test_data.csv")
+data_model <- read_csv("data/analysis_data/test_data.csv")
 
 ### Model data ####
 first_model <-
